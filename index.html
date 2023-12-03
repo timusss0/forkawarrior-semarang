@@ -299,7 +299,19 @@ class="bg-center h-screen flex items-center justify-center max-w-md mx-auto sm:m
     </div>
 </div>
 <!-- RAGAM MOTIF -->
-  
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var navbar = document.getElementById("nav");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 0) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    });
+
+</script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script type="text/javascript" src="vanilla-tilt.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
