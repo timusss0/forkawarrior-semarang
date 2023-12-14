@@ -33,9 +33,11 @@
     <!-- navbar -->
     <header>
         <nav id="nav" class="fixed w-full z-20 top-0 start-0 mb-[100px]">
+            <a href="#hero" class="active:text-gray">
+            </a>
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="index.html">
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap">Forkawarrior</span>
+                <a href="index.html" class="active:text-gray">
+                    <span class="active:text-gray self-center text-2xl font-semibold whitespace-nowrap">Forkawarrior</span>
                 </a>
                 <div class="flex bg-white-700 xl:order-2 xl:space-x-0 rtl:space-x-reverse">
                     <button type="button"
@@ -94,9 +96,10 @@
 
 
     <!-- hero -->
-    <div class="bg-center mt-[104px] flex items-center justify-center ">
-        <div class="text-center text-black ">
-            <div class="animate">
+    <section id="hero">
+        <div class="bg-center mt-[104px] flex items-center justify-center ">
+            <div class="text-center text-black ">
+                <div class="animate">
                 <img src="assets/megamendung-02.png" class="absolute w-[150px] mx-[-250px] my-[-50px] drop-shadow-lg"
                     data-aos="fade-right" transform: translateZ(40px) alt="">
                 <img src="assets/megamendung-03.png" class="absolute w-[150px] mx-[-300px] my-[150px] drop-shadow-lg"
@@ -128,17 +131,51 @@
             </p>
             <div data-tilt data-tilt-scale="1.2">
                 <a href="#sejarah" data-tilt data-tilt-scale="1.2"
-                    class="bg-cyan-600  text-black px-6 py-3 rounded-full " data-aos="fade-down">START THE
-                    JOURNEY!</a>
+                class="bg-cyan-600  text-black px-6 py-3 rounded-full " data-aos="fade-down">START THE
+                JOURNEY!</a>
             </div>
-
+            
             <div class="batik-container">
-
+                
             </div>
         </div>
     </div>
+</section>
     <!-- hero -->
 
+    <!-- MARQUEE -->
+    <section id="marquee">
+        <div class="images  mt-[100px]">
+            <div class="images-glide inline-flex ml-2 w-[1000px]">
+                <img src="assets/gentongan.jpeg"/>
+                <img src="assets/tujuh_rupa.jpg"/>
+                <img src="assets/sejarah.jpg"/>
+                <img src="assets/gentongan.jpeg"/>
+                <img src="assets/gentongan.jpeg"/>
+                <img src="assets/tujuh_rupa.jpg"/>
+                <img src="assets/sejarah.jpg"/>
+                <img src="assets/gentongan.jpeg"/>
+                <img src="assets/gentongan.jpeg"/>
+                <img src="assets/tujuh_rupa.jpg"/>
+                <img src="assets/sejarah.jpg"/>
+                <img src="assets/gentongan.jpeg"/>
+                <img src="assets/gentongan.jpeg"/>
+                <img src="assets/tujuh_rupa.jpg"/>
+                <img src="assets/sejarah.jpg"/>
+                <img src="assets/gentongan.jpeg"/>
+                <img src="assets/gentongan.jpeg"/>
+                <img src="assets/tujuh_rupa.jpg"/>
+                <img src="assets/sejarah.jpg"/>
+                <img src="assets/gentongan.jpeg"/>
+                <img src="assets/gentongan.jpeg"/>
+                <img src="assets/tujuh_rupa.jpg"/>
+                <img src="assets/sejarah.jpg"/>
+                <img src="assets/gentongan.jpeg"/>
+            </div>
+        </div>
+    </section>
+        <!-- MARQUEE -->
+    
     <!-- SEJARAH -->
     <section id="sejarah">
         <div id="sejarah"
@@ -510,7 +547,14 @@ window.onscroll = () => {
         });
 
     </script>
-    
+
+    <!-- MARQUEE SCRIPT -->
+    <script>
+        var copy = document.querySelector(".images-slide").cloneNode(true);
+        document.querySelector(".images").appendChild(copy);
+        </script>
+<!-- MARQUEE SCRIPT -->
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script type="text/javascript" src="vanilla-tilt.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
