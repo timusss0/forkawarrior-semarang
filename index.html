@@ -41,9 +41,15 @@
             transition: all .50s ease;
         }
         
-        .navbar a:hover{
+        .navbar a:hover, a.active{
             color: blue;
         }
+
+        /* section:nth-child(odd) {
+         background: #323946;
+        } */
+
+        
     </style>
 
 
@@ -66,19 +72,20 @@
 <body>
 
     <!-- navbar -->
-    <nav id="nav" class="fixed w-full z-20 top-0 start-0 mb-[100px]">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="index.html">
-                <span class="self-center text-2xl font-semibold whitespace-nowrap">Forkawarrior</span>
-            </a>
-            <div class="flex xl:order-2 space-x-3 xl:space-x-0 rtl:space-x-reverse">
-                <button type="button"
+    <header>
+        <nav id="nav" class="fixed w-full z-20 top-0 start-0 mb-[100px]">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="index.html">
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap">Forkawarrior</span>
+                </a>
+                <div class="flex bg-white-700 xl:order-2 xl:space-x-0 rtl:space-x-reverse">
+                    <button type="button"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get
                     started</button>
                 <button data-collapse-toggle="navbar-sticky" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white-500 rounded-lg xl:hidden hover:bg-white-100 focus:outline-none focus:ring-2 focus:ring-white-200 dark:text-white-400 dark:hover:bg-white-700 dark:focus:ring-white-600"
-                    aria-controls="navbar-sticky" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white-500 rounded-lg xl:hidden hover:bg-white-100 focus:outline-none focus:ring-2 focus:ring-white-200 dark:text-white-400 dark:hover:bg-white-700 dark:focus:ring-white-600"
+                aria-controls="navbar-sticky" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 17 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -91,38 +98,39 @@
                     class="navbar flex flex-col p-4 xl:p-0 mt-4 font-medium border xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0 dark:bg-white-800 xl:dark:bg-white-900 dark:border-white-700">
                     <li>
                         <a href="#sejarah"
-                            class="block py-2 px-3 text-gray bg-amber-700 rounded xl:bg-transparent xl:text-grey-700 xl:p-0 xl:dark:text-grey-500"
+                        class="block py-2 px-3 text-gray bg-white rounded xl:bg-transparent xl:text-grey-700 xl:p-0 xl:dark:text-grey-500"
                             aria-curren>Sejarah</a>
                     </li>
                     <li>
                         <a href="#makna"
-                            class="block py-2 px-3 text-gray bg-amber-700 rounded xl:bg-transparent xl:text-grey-700 xl:p-0 xl:dark:text-grey-500"
-                            aria-curren>Makna</a>
+                        class="block py-2 px-3 text-gray bg-white rounded xl:bg-transparent xl:text-grey-700 xl:p-0 xl:dark:text-grey-500"
+                        aria-curren>Makna</a>
                     </li>
                     <li>
                         <a href="#filosofi"
-                            class="block py-2 px-3 text-gray bg-amber-700 rounded xl:bg-transparent xl:text-grey-700 xl:p-0 xl:dark:text-grey-500"
-                            aria-curren>Filosifis</a>
+                        class="block py-2 px-3 text-gray bg-white rounded xl:bg-transparent xl:text-grey-700 xl:p-0 xl:dark:text-grey-500"
+                        aria-curren>Filosifis</a>
                     </li>
                     <li>
                         <a href="teknik.html"
-                            class="block py-2 px-3 text-gray bg-amber-700 rounded xl:bg-transparent xl:text-grey-700 xl:p-0 xl:dark:text-grey-500"
+                            class="block py-2 px-3 text-gray bg-white rounded xl:bg-transparent xl:text-grey-700 xl:p-0 xl:dark:text-grey-500"
                             aria-curren>Teknik Pembuatan</a>
-                    </li>
-                    <li>
+                        </li>
+                        <li>
                         <a href="#ragam"
-                            class="block py-2 px-3 text-gray bg-amber-700 rounded xl:bg-transparent xl:text-grey-700 xl:p-0 xl:dark:text-grey-500"
+                            class="block py-2 px-3 text-gray bg-white rounded xl:bg-transparent xl:text-grey-700 xl:p-0 xl:dark:text-grey-500"
                             aria-curren>Ragam Batik</a>
-                    </li>
-                    <li>
-                        <a href="#penggunaan"
-                            class="block py-2 px-3 text-gray bg-amber-700 rounded xl:bg-transparent xl:text-grey-700 xl:p-0 xl:dark:text-grey-500"
-                            aria-curren>Penggunaan Batik</a>
-                    </li>
-                </ul>
+                        </li>
+                        <li>
+                            <a href="#penggunaan"
+                            class="block py-2 px-3 text-gray bg-white rounded xl:bg-transparent xl:text-grey-700 xl:p-0 xl:dark:text-grey-500"
+                            aria-curren>Penggunaan Batik</a>  
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <!-- navbar -->
 
 
@@ -173,7 +181,8 @@
     <!-- hero -->
 
     <!-- SEJARAH -->
-    <div id="sejarah"
+    <section id="sejarah">
+        <div id="sejarah"
         class="bg-center h-screen flex items-center justify-center max-w-md mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-6xl mt-5">
         <div class="container px-6 flex flex-col-reverse md:flex-row">
             <div class="md:w-1/2">
@@ -197,10 +206,13 @@
             </div>
         </div>
     </div>
+</section>
     <!-- SEJARAH -->
 
     <!-- MAKNA -->
-    <div id="makna"
+    <section id="makna">
+        
+        <div id="makna"
         class="bg-center h-screen flex items-center justify-center max-w-md mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-6xl mt-5">
         <div class="container px-6 flex flex-col-reverse md:flex-row">
             <div class="md:w-1/2 mx-[10px] mt-5">
@@ -224,11 +236,13 @@
             </div>
         </div>
     </div>
+    </section>
     <!-- MAKNA -->
-
+    
 
     <!-- FILOSOFI -->
-    <div id="filosofi"
+    <section id="filosofi">
+        <div id="filosofi"
         class="bg-center h-screen flex items-center justify-center max-w-md mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-6xl mt-5">
         <div class="container px-6 flex flex-col-reverse md:flex-row">
             <div class="md:w-1/2">
@@ -253,14 +267,16 @@
         </div>
 
     </div>
+    </section>
     <!-- FILOSOFI -->
-
+    
     <!-- RAGAM MOTIF -->
-    <div id="ragam" class="pt-[90px]">
-        <h1 class=" text-5xl text-center italic font-bold font-serif text-left mt-[0px] mb-[10px]" data-aos="fade-down">
-            <span class="text-amber-800">Ragam </span>batik
-        </h1>
-        <div class="p">
+    <section id="ragam">
+        <div id="ragam" class="pt-[90px]">
+            <h1 class=" text-5xl text-center italic font-bold font-serif text-left mt-[0px] mb-[10px]" data-aos="fade-down">
+                <span class="text-amber-800">Ragam </span>batik
+            </h1>
+            <div class="p">
             <div class="kotak">
                 <div class="card shadow-2xl" style="--clr:#009688">
                     <div class="imgBx"><img src="assets/tujuh_rupa.jpg" alt=""></div>
@@ -307,15 +323,17 @@
             </div>
         </div>
     </div>
+</section>
     <!-- RAGAM MOTIF -->
 
 
     <!-- PENGGUNAAN BATIK -->
-    <div id="penggunaan"
+    <section id="penggunaan">
+        <div id="penggunaan"
         class="bg-center h-screen flex items-center justify-center max-w-md mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-6xl mt-5">
         <div class="container px-6 flex flex-col-reverse md:flex-row">
             <div class="md:w-1/2 mx-[10px] mt-5">
-
+                
                 <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true"
                     centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="50"
                     coverflow-effect-stretch="0" coverflow-effect-depth="100" coverflow-effect-modifier="1"
@@ -349,7 +367,7 @@
                     </swiper-slide>
                 </swiper-container>
             </div>
-
+            
             <div class="md:w-1/2 mt-[-55px]">
                 <h1 class="text-5xl italic font-bold font-serif text-right mt-[99px]" data-aos="fade-down">
                     <span class="text-amber-800">Penggunaan </span>batik
@@ -367,7 +385,7 @@
         </div>
     </div>
     <!-- 8 -->
-
+    
     <!-- 9 -->
     <div
         class="bg-center h-screen flex items-center justify-center max-w-md mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-6xl mt-5">
@@ -424,6 +442,7 @@
             </div>
         </div>
     </div>
+</section>
     <!-- PENGGUNAAN BATIK -->
 
     <!-- FOOTER -->
@@ -498,7 +517,26 @@
     <!-- FOOTER -->
 
 
-
+<!-- SCRIPT ACTIVE NAVBAR -->
+<script>
+    let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        };
+    });
+};
+</script>
+<!-- SCRIPT ACTIVE NAVBAR -->
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -513,9 +551,11 @@
         });
 
     </script>
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script type="text/javascript" src="vanilla-tilt.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         AOS.init();
