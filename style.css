@@ -1,7 +1,48 @@
-body {
-  overflow-x: hidden;
+* {
+  box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+  background-image: url('assets/background-batik-Recovered.png');
+  padding: 50px;
+
+}
+
+/* ---------------------------------------------------------------
+NAVBAR
+--------------------------------------------------------------- */
+nav {
+  z-index: 100;
+  transition: background-color 0.3s;
+
+}
+
+nav.scrolled {
+  background-color: #ffffff;
+
+}
+
+.swiper {
+  height: 500px;
+}
+
+.navbar a{
+  transition: all .50s ease;
+}
+
+.navbar a:hover, a.active{
+  color: blue;
+}
+
+/* section:nth-child(odd) {
+background: #323946;
+} */
+
+
+/* ---------------------------------------------------------------
+ANIMATED MEGA MENDUNG
+--------------------------------------------------------------- */
 .animate {
   /* animation: img 5s infinite;
     animation-timing-function: linear;
@@ -35,6 +76,9 @@ body {
   }
 }
 
+/* ---------------------------------------------------------------
+SLIDER 
+---------------------------------------------------------------- */
 .slider {
   height: 400px;
   overflow: hidden;
@@ -88,6 +132,9 @@ swiper-slide img {
   width: 100%;
 }
 
+/* ---------------------------------------------------------------
+CARD
+--------------------------------------------------------------- */
 .p{
   display: flex;
   justify-content: center;
@@ -167,3 +214,6 @@ swiper-slide img {
   font-size: 1.5rem;
   font-weight: 700;
 }
+
+/* ---------------------------------------------------------------
+--------------------------------------------------------------- */
