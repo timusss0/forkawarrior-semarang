@@ -57,11 +57,10 @@ MARQUEE
   }
 }
 
-
 .images {
   overflow: hidden;
   padding: 60px 0;
-  right: 90px;
+  right: 80px;
   width: 1000em;
   background: white;
   white-space: nowrap;
@@ -88,7 +87,7 @@ MARQUEE
 }
 
 .images:hover .images-glide {
-  animation-play-state:   running;
+  animation-play-state: running;
 }
 
 .images-glide {
@@ -97,7 +96,7 @@ MARQUEE
 }
 
 .images-glide img {
-  height: 100px;
+  height: 20em;
   width: auto;
   border-radius: 10px;
   margin: 0 3em;
