@@ -32,7 +32,8 @@ nav.scrolled {
 }
 
 .navbar a:hover, a.active{
-  color: blue;
+  color: rgb(120, 53, 15);
+  border-bottom: 2px solid rgb(120, 53, 15);
 }
 
 .navbar span:active{
