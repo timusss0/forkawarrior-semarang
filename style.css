@@ -32,11 +32,35 @@ nav.scrolled {
 
 .navbar a:hover, a.active{
   color: rgb(120, 53, 15);
-  border-bottom: 2px solid rgb(120, 53, 15);
+
 }
 
 .navbar span:active{
   color: #333;
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: #000000;
+  text-decoration: none;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(120, 53, 15);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* section:nth-child(odd) {
