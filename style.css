@@ -5,7 +5,6 @@
 body {
   overflow-x: hidden;
   background-image: url('assets/background-batik-Recovered.png');
-  padding: 50px;
 
 }
 
@@ -32,11 +31,36 @@ nav.scrolled {
 }
 
 .navbar a:hover, a.active{
-  color: blue;
+  color: rgb(120, 53, 15);
+
 }
 
 .navbar span:active{
   color: #333;
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: #000000;
+  text-decoration: none;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(120, 53, 15);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* section:nth-child(odd) {
@@ -47,7 +71,6 @@ background: #323946;
 MARQUEE
 --------------------------------------------------------------- */
 
-
 @keyframes glide {
   from {
     transform: translate(0, 0);
@@ -57,16 +80,12 @@ MARQUEE
   }
 }
 
-
 .images {
   overflow: hidden;
   padding: 60px 0;
-  right: 90px;
-  width: 1000em;
   background: white;
   white-space: nowrap;
   position: relative;
-
 }
 
 .images:before,
@@ -84,31 +103,32 @@ MARQUEE
 }
 
 .images:after {
-  right: 0;
+  right: 0
 }
 
 .images:hover .images-glide {
-  animation-play-state:   running;
+  animation-play-state: paused;
 }
 
 .images-glide {
+  height: 100px;
   display: inline-block;
-  animation: 35s glide infinite linear;
+  animation: 75s glide infinite linear;
 }
 
 .images-glide img {
-  height: 100px;
-  width: auto;
+  height: 15em;
+  margin: 0 40px;
   border-radius: 10px;
-  margin: 0 3em;
 }
 
-@media (max-width: 640px){
+@media (max-width: 920px){
   .images-glide img{
-    height: 70px;
+    height: 11em;
     margin: 0 20px;
   }
 }
+
 
 
 
