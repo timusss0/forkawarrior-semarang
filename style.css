@@ -368,6 +368,11 @@ CERITA
   /* padding-top: 10px; */
   background-color: #d1b29328;
 }
+.ragam{
+  /* padding-top: 10px; */
+  background-color: #d1b29328;
+}
+
 
 .timeline {
   margin: 0 auto;
@@ -429,4 +434,78 @@ CERITA
 
 .timeline__paragraph {
   line-height: 1.5;
+}
+/* ---------------------------------------------------------------
+Teknik
+--------------------------------------------------------------- */
+
+.card-teknik-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+  justify-content: center;
+}
+
+@media (max-width: 1024px){
+  .card-teknik-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+}
+
+.card-teknik {
+  max-width: 300px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 1s;
+}
+
+.card-teknik:hover {
+  transform: scale(1.05);
+  border-radius: 50px;
+}
+
+.card-teknik img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-teknik-content {
+  padding: 16px;
+}
+
+.card-teknik-title {
+  font-size: 1.2em;
+  text-align: center; /* Mengatur judul ke tengah */
+  margin-bottom: 8px;
+}
+
+.card-teknik-description {
+  color: #666;
+  text-align: justify; /* Rata kanan kiri */
+}
+
+.learn-more-btn {
+  display: block;
+  margin-top: 16px;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(120, 53, 15);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.learn-more-btn:hover {
+  background-color: rgb(187, 93, 38);
 }
