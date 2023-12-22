@@ -438,74 +438,89 @@ CERITA
 /* ---------------------------------------------------------------
 Teknik
 --------------------------------------------------------------- */
-
-.card-teknik-container {
+.card_container{
   display: flex;
   flex-wrap: wrap;
-  gap: 70px;
+  align-items: center;
   justify-content: center;
 }
-
-@media (max-width: 1024px){
-  .card-teknik-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+ 
 }
 
-.card-teknik {
-  max-width: 300px;
+.card .face {
+  position: absolute;
   width: 100%;
-  background-color: #fff;
-  border-radius: 8px;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: 1s;
+  transition: .5s;
 }
 
-.card-teknik:hover {
-  transform: scale(1.05);
-  border-radius: 50px;
+.card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
 }
 
-.card-teknik img {
+.card .front img {
+  position: absolute;
   width: 100%;
-  height: auto;
-  border-bottom: 1px solid #ddd;
+  height: 100%;
+  object-fit: cover;
 }
 
-.card-teknik-content {
-  padding: 16px;
-}
-
-.card-teknik-title {
-  font-size: 1.2em;
-  text-align: center; /* Mengatur judul ke tengah */
-  margin-bottom: 8px;
-}
-
-.card-teknik-description {
-  color: #666;
-  text-align: justify; /* Rata kanan kiri */
-}
-
-.learn-more-btn {
-  display: block;
-  margin-top: 16px;
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  background-color: rgb(120, 53, 15);
+.card .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
   color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.5s;
+  background: rgba(0,0,0,.4);
+  text-align: center;
 }
 
-.learn-more-btn:hover {
-  background-color: rgb(187, 93, 38);
+.card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgba(86, 61, 14, 0.719);
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+  border-top: solid 1px #f3f3f3;
+  height: 50px;
+  line-height: 50px;
+}
+
+.card .back .link a {
+  color: #f3f3f3;
+}
+
+.card .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.card .back p {
+  letter-spacing: 1px;
+} 
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
 }
